@@ -20,7 +20,7 @@ template_contour = contours[1]
 binary, contours, hierarchy = cv2.findContours(thresh2, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
 for c in contours:
-    match = cv2.matchShapes(template_contour, c, 1, 0.0)
+    match = cv2.matchShapes(template_contour, c, 1, 0.0) # Match Shapes
     print(match)
     if match < 0.15:
         closest_contour = c
